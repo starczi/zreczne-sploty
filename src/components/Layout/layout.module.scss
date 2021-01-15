@@ -1,0 +1,14 @@
+.container {
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 1rem;
+  // background-image: url("../../../static/texture.png");
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; //set container height to screen height
+}
+
+.content {
+  flex-grow: 1; //allow container to grow as needed leaving just enought space for footer
+}
