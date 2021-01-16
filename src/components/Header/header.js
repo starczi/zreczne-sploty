@@ -49,11 +49,11 @@ export default function Header() {
           </li>
           <li className={headerStyles.navItem}>
             <Link
-              to="/products"
+              to="/portfolio"
               className={headerStyles.navItem}
               activeClassName={headerStyles.navItemActive}
             >
-              Produkty
+              Portfolio
             </Link>
           </li>
           <li className={headerStyles.navItem}>
