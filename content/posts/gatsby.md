@@ -1,11 +1,10 @@
 ---
 title: "The Great Gatsby"
 date: "2021-01-04"
+description: "Lorem"
 ---
 
 Some text
-
-![Capibara](./capibara.jpg)
 
 ## Topics Covered
 
