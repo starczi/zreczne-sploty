@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
+// import PropTypes from 'prop-types';
 import Layout from '../components/Layout/layout';
 
 export const query = graphql`
@@ -13,17 +15,23 @@ export const query = graphql`
     }
   }
 `;
-// Gatsby is gonna run this graphql query and the variable "slug" is going to come from the context, which was set in createPage.
-// Then it is going to take the response (the post data) and its going to provide it as a prop to the Blog component
+// Gatsby is gonna run this graphql query and the variable "slug"
+// is going to come from the context, which was set in createPage.
+// Then it is going to take the response (the post data) and
+// its going to provide it as a prop to the Blog component
 
-export default function BlogPostTemplate(props) {
+export default function BlogPostTemplate({ data }) {
+  //
   return (
     <Layout>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      ></div>
+      <h1>{data.markdownRemark.frontmatter.title}</h1>
+      <p>{data.markdownRemark.frontmatter.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Layout>
   );
 }
+
+// BlogPostTemplate.propTypes = {
+//   // eslint-disable-next-line react/forbid-prop-types
+//   data: PropTypes.object.isRequired,
+// };

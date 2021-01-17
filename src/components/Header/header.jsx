@@ -1,26 +1,38 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import headerStyles from './header.module.scss';
-import logo from '../../../static/logo.png';
 
 export default function Header() {
   const data = useStaticQuery(graphql`
-    query {
+    query HeaderQuery {
       site {
         siteMetadata {
           title
         }
       }
+      file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fixed(width: 125, height: 125) {
+            ...GatsbyImageSharpFixed
+          }
+          fluid(maxWidth: 125, maxHeight: 125) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
+
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.topContainer}>
         <Link to="/">
-          <img
-            src={logo}
+          <Img
+            //FIX STYLES!
+            fixed={data.file.childImageSharp.fixed}
             alt="logo"
-            className={headerStyles.topContainerLogo}
+            // className={headerStyles.topContainerLogo}
           />
         </Link>
         <div className={headerStyles.topContainerTitle}>
