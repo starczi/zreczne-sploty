@@ -1,8 +1,8 @@
-import React from "react"
-import Header from "../Header/header"
-import Footer from "../Footer/footer"
-import "../../styles/index.scss"
-import layoutStyles from "./layout.module.scss"
+import React from 'react';
+import Header from '../Header/header';
+import Footer from '../Footer/footer';
+import '../../styles/index.scss';
+import layoutStyles from './layout.module.scss';
 
 export default function Layout(props) {
   return (
@@ -13,5 +13,5 @@ export default function Layout(props) {
       </div>
       <Footer />
     </div>
-  )
+  );
 }

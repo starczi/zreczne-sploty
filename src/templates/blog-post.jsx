@@ -1,6 +1,6 @@
-import React from "react"
-import Layout from "../components/Layout/layout"
-import { graphql } from "gatsby"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout/layout';
 
 export const query = graphql`
   query($slug: String) {
@@ -12,9 +12,9 @@ export const query = graphql`
       html
     }
   }
-`
+`;
 // Gatsby is gonna run this graphql query and the variable "slug" is going to come from the context, which was set in createPage.
-//Then it is going to take the response (the post data) and its going to provide it as a prop to the Blog component
+// Then it is going to take the response (the post data) and its going to provide it as a prop to the Blog component
 
 export default function BlogPostTemplate(props) {
   return (
@@ -25,5 +25,5 @@ export default function BlogPostTemplate(props) {
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
     </Layout>
-  )
+  );
 }

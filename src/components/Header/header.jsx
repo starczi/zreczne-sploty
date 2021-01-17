@@ -1,7 +1,7 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import headerStyles from "./header.module.scss"
-import logo from "../../../static/logo.png"
+import React from 'react';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import headerStyles from './header.module.scss';
+import logo from '../../../static/logo.png';
 
 export default function Header() {
   const data = useStaticQuery(graphql`
@@ -12,7 +12,7 @@ export default function Header() {
         }
       }
     }
-  `)
+  `);
   return (
     <header className={headerStyles.header}>
       <div className={headerStyles.topContainer}>
@@ -77,5 +77,5 @@ export default function Header() {
         </ul>
       </nav>
     </header>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import React from "react"
-import Layout from "../components/Layout/layout"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import blogStyles from "./blog.module.scss"
+import React from 'react';
+import Layout from '../components/Layout/layout';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import blogStyles from './blog.module.scss';
 
 export default function Blog() {
   const data = useStaticQuery(graphql`
@@ -20,13 +20,13 @@ export default function Blog() {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
       <h1>Blog page</h1>
       <ol className={blogStyles.posts}>
-        {data.allMarkdownRemark.edges.map(edge => {
+        {data.allMarkdownRemark.edges.map((edge) => {
           return (
             <li key={edge.node.frontmatter.title} className={blogStyles.post}>
               <Link to={`/blog/${edge.node.fields.slug}`}>
@@ -34,9 +34,9 @@ export default function Blog() {
                 <p>{edge.node.frontmatter.date}</p>
               </Link>
             </li>
-          )
+          );
         })}
       </ol>
     </Layout>
-  )
+  );
 }

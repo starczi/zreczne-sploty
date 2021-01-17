@@ -7,26 +7,26 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "zreczne sploty",
-    author: "starczi",
+    title: 'zreczne sploty',
+    author: 'starczi',
   },
   plugins: [
-    "gatsby-plugin-sass",
+    'gatsby-plugin-sass',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/`,
-        name: "pages",
+        name: 'pages',
       },
     },
-    "gatsby-plugin-sharp",
+    'gatsby-plugin-sharp',
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          "gatsby-remark-relative-images",
+          'gatsby-remark-relative-images',
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 750,
               linkImagesToOriginal: false,
@@ -35,6 +35,7 @@ module.exports = {
         ],
       },
     },
-    "gatsby-plugin-netlify-cms",
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-eslint',
   ],
-}
+};
