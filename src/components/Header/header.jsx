@@ -29,7 +29,7 @@ export default function Header() {
       <div className={headerStyles.topContainer}>
         <Link to="/">
           <Img
-            //FIX STYLES!
+            // FIX STYLES!
             fixed={data.file.childImageSharp.fixed}
             alt="logo"
             // className={headerStyles.topContainerLogo}
