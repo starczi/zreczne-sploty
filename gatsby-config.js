@@ -9,6 +9,8 @@ module.exports = {
   siteMetadata: {
     title: 'zreczne sploty',
     author: 'starczi',
+    facebook: 'https://www.facebook.com/ZreczneSplotyByPiorkowskie/',
+    instagram: 'https://www.instagram.com/zreczne.sploty/',
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -43,7 +45,18 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: ['develop'],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
+      },
+    },
     'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-eslint',
   ],
 };

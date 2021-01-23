@@ -1,3 +1,20 @@
 .footer {
   margin-top: 3rem;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: #6eb48c;
+    transition: all 0.5s ease-in-out;
+    // -webkit-transition: color 0.3s;
+    // -moz-transition: color 0.3s;
+    outline: none;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  a:hover {
+    // background: black;
+    color: #aaa;
+    // border-color: #6eb48c;
+  }
 }
