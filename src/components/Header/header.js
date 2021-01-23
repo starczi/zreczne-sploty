@@ -35,54 +35,32 @@ export default function Header() {
             // className={headerStyles.topContainerLogo}
           />
         </Link>
-        <div className={headerStyles.topContainerTitle}>
-          {data.site.siteMetadata.title}
-        </div>
+        <div className={headerStyles.topContainerTitle}>{data.site.siteMetadata.title}</div>
       </div>
       <nav>
         <ul className={headerStyles.navList}>
           <li>
-            <Link
-              to="/"
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.navItemActive}
-            >
+            <Link to="/" className={headerStyles.navItem} activeClassName={headerStyles.navItemActive}>
               Home
             </Link>
           </li>
           <li>
-            <Link
-              to="/blog"
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.navItemActive}
-            >
+            <Link to="/blog" className={headerStyles.navItem} activeClassName={headerStyles.navItemActive}>
               Blog
             </Link>
           </li>
           <li className={headerStyles.navItem}>
-            <Link
-              to="/portfolio"
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.navItemActive}
-            >
+            <Link to="/portfolio" className={headerStyles.navItem} activeClassName={headerStyles.navItemActive}>
               Portfolio
             </Link>
           </li>
           <li className={headerStyles.navItem}>
-            <Link
-              to="/about"
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.navItemActive}
-            >
+            <Link to="/about" className={headerStyles.navItem} activeClassName={headerStyles.navItemActive}>
               O nas
             </Link>
           </li>
           <li className={headerStyles.navItem}>
-            <Link
-              to="/contact"
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.navItemActive}
-            >
+            <Link to="/contact" className={headerStyles.navItem} activeClassName={headerStyles.navItemActive}>
               Kontakt
             </Link>
           </li>
