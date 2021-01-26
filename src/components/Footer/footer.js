@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookSquare, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import footerStyles from './footer.module.scss';
 
 export default function Footer() {
@@ -11,7 +11,6 @@ export default function Footer() {
     query {
       site {
         siteMetadata {
-          author
           instagram
           facebook
         }
@@ -21,15 +20,14 @@ export default function Footer() {
   return (
     <footer className={footerStyles.footer}>
       <a href={data.site.siteMetadata.facebook} rel="nofollow noreferrer" target="_blank">
-        <FontAwesomeIcon icon={faFacebookSquare} size="6x" />
+        <FontAwesomeIcon icon={faFacebookF} size="2x" transform="shrink-2.2" />
       </a>
       <a href={data.site.siteMetadata.instagram} rel="nofollow noreferrer" target="_blank">
-        <FontAwesomeIcon icon={faInstagramSquare} size="6x" />
+        <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
       <Link to="/contact">
-        <FontAwesomeIcon icon={faEnvelope} size="6x" />
+        <FontAwesomeIcon icon={faEnvelope} size="2x" transform="grow-1.2" />
       </Link>
-      <p>Footer text</p>
     </footer>
   );
 }
