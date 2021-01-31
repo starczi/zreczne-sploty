@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout/layout';
-import indexStyles from './index.module.scss';
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -23,9 +22,7 @@ export default function Home() {
   `);
   return (
     <Layout>
-      <div className={indexStyles.container}>
-        <Img className={indexStyles.img} fluid={data.file.childImageSharp.fluid} alt="logo" />
-      </div>
+      <Img fluid={data.file.childImageSharp.fluid} alt="hero" />
     </Layout>
   );
 }

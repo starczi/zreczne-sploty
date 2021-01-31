@@ -1,25 +1,21 @@
-import React, { useState } from 'react';
-import Nav from './navigation';
-// import Hamburger from './hamburger';
+import React from 'react';
+import styled from 'styled-components';
+import Burger from './burger';
 import Logo from './logo';
-import headerStyles from './header.module.scss';
+
+const StyledHeader = styled.header`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+`;
 
 export default function Header() {
-  // const [showMenu, setShowMenu] = useState(false);
-
-  // let menu;
-  // if (!showMenu) {
-  //   menu = <div> yolo</div>;
-  // }
-
   return (
-    <header className={headerStyles.header}>
+    <StyledHeader>
       <Logo />
-      <div className={headerStyles.navWrapper}>
-        <Nav />
-        {/* <Hamburger onClick={() => setShowMenu(!showMenu)} /> */}
-      </div>
-      {/* {menu} */}
-    </header>
+      <Burger />
+    </StyledHeader>
   );
 }

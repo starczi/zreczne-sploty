@@ -1,20 +1,19 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
 import Img from 'gatsby-image';
-import logoStyles from './logo.module.scss';
+
+const StyledLink = styled(Link)`
+  padding-top: 1rem;
+`;
 
 export default function Logo() {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
       file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 150) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 150, height: 150) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -22,8 +21,8 @@ export default function Logo() {
   `);
 
   return (
-    <Link to="/" className={logoStyles.link}>
-      <Img className={logoStyles.logo} style={{ width: '150px' }} fluid={data.file.childImageSharp.fluid} alt="logo" />
-    </Link>
+    <StyledLink to="/">
+      <Img fixed={data.file.childImageSharp.fixed} alt="logo" />
+    </StyledLink>
   );
 }
