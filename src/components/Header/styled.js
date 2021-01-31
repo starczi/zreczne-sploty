@@ -1,21 +1,12 @@
-nav {
-  width: 100%;
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-  ul {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-  }
-}
-
-.nav-item {
-  margin-right: 2rem;
-  color: #000000;
-  font-size: 1.5rem;
-  text-decoration: none;
+export const StyledNavbarLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.black};
+  font-size: 1.2rem;
   position: relative;
 
-  &-active::before,
+  &.active::before,
   &::after {
     content: '';
     position: absolute;
@@ -23,7 +14,7 @@ nav {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: black;
+    background-color: ${({ theme }) => theme.colors.black};
   }
 
   &::after {
@@ -34,4 +25,4 @@ nav {
   &:hover::after {
     transform: scaleX(1);
   }
-}
+`;
