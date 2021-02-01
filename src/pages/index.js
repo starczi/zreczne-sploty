@@ -11,7 +11,7 @@ export default function Home() {
           title
         }
       }
-      file(relativePath: { eq: "hero.jpeg" }) {
+      file(relativePath: { eq: "hero.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1170, maxHeight: 585) {
             ...GatsbyImageSharpFluid
