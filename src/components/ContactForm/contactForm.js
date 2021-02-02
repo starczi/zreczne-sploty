@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import { navigate } from 'gatsby-link';
 import styled from 'styled-components';
 
@@ -87,11 +87,19 @@ export default function ContactForm() {
     <StyledForm
       name="contact v1"
       method="post"
+      action="/thanks"
       data-netlify="true"
-      // data-netlify-honeypot="bot-field"
+      data-netlify-honeypot="bot-field"
       onSubmit="submit"
     >
       <input type="hidden" name="form-name" value="contact v1" />
+      <p hidden>
+        <label>
+          Dont fill this out:
+          <input name="bot-field" />
+        </label>
+      </p>
+
       <label htmlFor="name">Name</label>
       <input
         // id="name"
