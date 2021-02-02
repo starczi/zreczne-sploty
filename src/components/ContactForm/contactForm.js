@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { navigate } from 'gatsby-link';
 import styled from 'styled-components';
 
 const StyledForm = styled.form`
@@ -45,72 +46,77 @@ const StyledForm = styled.form`
   }
 `;
 
+// const encode = (data) => {
+//   Object.keys(data)
+//     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+//     .join('&');
+// };
+
 export default function ContactForm() {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  // const [formState, setFormState] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  // });
 
-  const encode = (data) => {
-    Object.keys(data)
-      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-      .join('&');
-  };
+  // const handleChange = (e) => {
+  //   setFormState({
+  //     ...formState,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const handleChange = (e) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...formState }),
-    })
-      .then(() => alert('Success!'))
-      .catch((error) => alert(error));
-
-    e.preventDefault();
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const form = e.target;
+  //   // eslint-disable-next-line no-undef
+  //   fetch('/contact/?no-cache=1', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({
+  //       'form-name': form.getAttribute('name'),
+  //       ...formState,
+  //     }),
+  //   })
+  //     .then(console.log(encode({ 'form-name': 'contact', ...formState })))
+  //     // eslint-disable-next-line no-undef
+  //     .catch((error) => alert(error));
+  // };
 
   return (
     <StyledForm
-      onSubmit={handleSubmit}
-      name="contact"
-      method="POST"
+      name="contact v1"
+      method="post"
       data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      // data-netlify-honeypot="bot-field"
+      onSubmit="submit"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="contact v1" />
       <label htmlFor="name">Name</label>
       <input
-        id="name"
+        // id="name"
         type="text"
         name="name"
-        onChange={handleChange}
-        value={formState.name}
+        // onChange={handleChange}
+        // value={formState.name}
         placeholder="Enter your name"
       />
       <label htmlFor="email">Email</label>
       <input
-        id="email"
+        // id="email"
         type="email"
         name="email"
-        onChange={handleChange}
-        value={formState.email}
+        // onChange={handleChange}
+        // value={formState.email}
         placeholder="Enter your email"
       />
       <label htmlFor="message">Message</label>
       <textarea
-        id="message"
+        // id="message"
         type="text"
         name="message"
-        onChange={handleChange}
-        value={formState.message}
+        // onChange={handleChange}
+        // value={formState.message}
         placeholder="Enter your message"
       />
       <button type="submit">Submit</button>
