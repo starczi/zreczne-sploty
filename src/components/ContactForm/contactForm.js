@@ -81,7 +81,7 @@ export default function ContactForm() {
     <StyledForm
       onSubmit={handleSubmit}
       name="contact"
-      method="post"
+      method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
