@@ -38,6 +38,10 @@ const StyledForm = styled.form`
     &:hover {
       background: #3498db;
     }
+
+    div {
+      width: 100%;
+    }
   }
 `;
 
@@ -110,7 +114,7 @@ export default function ContactForm() {
         value={formState.message}
         placeholder="Enter your message"
       />
-      <div data-netlify-recaptcha="true" />
+      <div data-netlify-recaptcha="true"></div>
       <button type="submit">Submit</button>
     </StyledForm>
   );
