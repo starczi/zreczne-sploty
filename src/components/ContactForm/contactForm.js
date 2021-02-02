@@ -80,6 +80,7 @@ export default function ContactForm() {
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <label htmlFor="name">Name</label>
@@ -109,8 +110,8 @@ export default function ContactForm() {
         value={formState.message}
         placeholder="Enter your message"
       />
-      <button type="submit">Submit</button>
       <div data-netlify-recaptcha="true" />
+      <button type="submit">Submit</button>
     </StyledForm>
   );
 }
