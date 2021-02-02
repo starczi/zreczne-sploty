@@ -59,5 +59,6 @@ module.exports = {
     },
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-fontawesome-css', // weird resizing of icons
   ],
 };
