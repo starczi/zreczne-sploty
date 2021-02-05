@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 const StyledForm = styled.form`
   max-width: 500px;
-  margin: 2rem auto;
-  border: 2px solid ${({ theme }) => theme.colors.black};
+  margin: 0 auto;
   padding: 2rem;
   border-radius: 5px;
 
@@ -18,10 +17,17 @@ const StyledForm = styled.form`
   input,
   textarea {
     display: block;
-    width: 100%;
-    border: 2px solid ${({ theme }) => theme.colors.black};
+    border: 1px solid ${({ theme }) => theme.colors.black};
     padding: 0.5rem;
     border-radius: 5px;
+  }
+  input {
+    width: 50%;
+    margin: 0 auto;
+  }
+  textarea {
+    width: 100%;
+    min-height: 150px;
   }
 
   button {
@@ -34,7 +40,7 @@ const StyledForm = styled.form`
     text-transform: uppercase;
     transition: 0.3s background ease;
     &:hover {
-      background: ${({ theme }) => theme.colors.lightGrey};
+      background: ${({ theme }) => theme.colors.darkGrey};
     }
   }
 `;

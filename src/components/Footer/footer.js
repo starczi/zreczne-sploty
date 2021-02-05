@@ -19,7 +19,7 @@ const StyledFooter = styled.footer`
     }
 
     &:hover {
-      color: ${({ theme }) => theme.colors.lightGrey};
+      color: ${({ theme }) => theme.colors.darkGrey};
     }
   }
 `;

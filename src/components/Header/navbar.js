@@ -11,7 +11,7 @@ const StyledUl = styled.ul`
     padding: 2rem 1rem;
   }
 
-  @media (max-width: ${({ theme }) => theme.device.s}) {
+  @media (max-width: ${({ theme }) => theme.devices.s}) {
     flex-flow: column nowrap;
     overflow: hidden;
     max-height: ${({ open }) => (open ? '350px' : '0')};

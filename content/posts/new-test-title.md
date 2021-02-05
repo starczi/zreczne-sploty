@@ -1,8 +1,10 @@
 ---
 title: New test title
 date: 2021-01-16T16:07:51.276Z
-description: test
+description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non neque quis nisl semper efficitur eget a quam.'
+featuredImage: '../../static/images/mak2.jpg'
 ---
+
 <!--StartFragment-->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non neque quis nisl semper efficitur eget a quam. Vivamus imperdiet magna id quam tristique, vel hendrerit quam commodo. Cras condimentum enim laoreet metus dapibus blandit. Etiam eu luctus felis, nec porttitor nulla. Fusce sed odio urna. Nam sollicitudin neque lacus, vel posuere ante vestibulum et. Pellentesque volutpat, felis nec condimentum rhoncus, sem tellus ullamcorper velit, viverra hendrerit tellus diam non augue.

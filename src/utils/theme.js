@@ -1,9 +1,10 @@
 export const theme = {
   colors: {
     black: '#000000',
-    lightGrey: '#666666',
+    darkGrey: '#666666',
+    lightGrey: '#f4f4f4',
   },
-  device: {
+  devices: {
     s: '576px',
     m: '768px',
     l: '1024px',
