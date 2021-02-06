@@ -4,6 +4,34 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout/layout';
 
+const StyledWrapper = styled.div`
+  max-width: 850px;
+  min-width: 272px;
+  margin: 0 auto;
+  position: relative;
+
+  p {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 1;
+    color: ${({ theme }) => theme.colors.black};
+    background: white;
+    opacity: 0.65;
+    transition: all 1s ease;
+
+    @media (max-width: 576px) {
+      font-size: 1.2rem;
+    }
+  }
+`;
+
 // Do ogarnięcia max width/height i wyciągnąć podkreślanie do czegoś
 const StyledLi = styled.li`
   display: flex;
@@ -82,6 +110,14 @@ const StyledP = styled.p`
 export default function Blog() {
   const data = useStaticQuery(graphql`
     query {
+      file(relativePath: { eq: "hero_blog.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 850, maxHeight: 425, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
@@ -91,10 +127,7 @@ export default function Blog() {
               date(formatString: "DD MMMM, YYYY", locale: "pl")
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 1170, maxHeight: 585) {
-                    ...GatsbyImageSharpFluid_noBase64
-                  }
-                  fixed(width: 272, height: 272) {
+                  fixed(width: 272, height: 272, quality: 100) {
                     ...GatsbyImageSharpFixed_noBase64
                   }
                 }
@@ -111,6 +144,10 @@ export default function Blog() {
 
   return (
     <Layout>
+      <StyledWrapper>
+        <p>Lorem ipsum</p>
+        <Img fluid={data.file.childImageSharp.fluid} alt="hero-blog" />
+      </StyledWrapper>
       <ul>
         {data.allMarkdownRemark.edges.map((edge) => (
           <StyledLi key={edge.node.frontmatter.title}>
