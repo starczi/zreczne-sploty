@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Layout from '../components/Layout/layout';
 
+// Do ogarnięcia max width/height i wyciągnąć podkreślanie do czegoś
 const StyledLi = styled.li`
   display: flex;
   width: 680px;
@@ -11,8 +12,8 @@ const StyledLi = styled.li`
   margin: 0 auto 2rem;
   box-shadow: 0 0 40px rgb(0 0 0 / 8%);
 
-  a {
-    background: green; //I OGARNĄĆ TO WINCYJ - MAX HEIGHT I ZDJĘCIE??
+  .link {
+    display: flex;
   }
 
   @media (max-width: 712px) {
@@ -34,20 +35,20 @@ const StyledContentWrapper = styled.div`
 
   @media (max-width: 712px) {
     width: auto;
-    max-height: 332px;
+    /* max-height: 332px; */
   }
 `;
 
 const StyledP = styled.p`
   position: relative;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
   font-style: italic;
   margin: auto 0;
   max-height: 168px;
 
-  div {
-    float: right;
-    margin-top: 1rem;
+  span {
+    display: table;
+    margin: 1rem 0 0 auto;
     position: relative;
 
     &::after {
@@ -114,7 +115,7 @@ export default function Blog() {
         {data.allMarkdownRemark.edges.map((edge) => (
           <StyledLi key={edge.node.frontmatter.title}>
             <div>
-              <Link to={`/blog/${edge.node.fields.slug}`}>
+              <Link to={`/blog/${edge.node.fields.slug}`} className="link">
                 <Img fixed={edge.node.frontmatter.featuredImage.childImageSharp.fixed} alt="hero" />
               </Link>
             </div>
@@ -125,9 +126,9 @@ export default function Blog() {
               <h6>{edge.node.frontmatter.date}</h6>
               <StyledP>
                 {edge.node.frontmatter.description.replace(/\u00a0/g, ' ')}
-                <div>
+                <span>
                   <Link to={`/blog/${edge.node.fields.slug}`}>Wincyj</Link>
-                </div>
+                </span>
               </StyledP>
             </StyledContentWrapper>
           </StyledLi>
