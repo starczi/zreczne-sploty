@@ -8,6 +8,7 @@ import { GlobalStyles } from '../../utils/global';
 const StyledContainer = styled.div`
   margin: 0 auto;
   max-width: 1170px;
+  min-width: 441px;
   padding: 0 1rem;
 
   display: flex;

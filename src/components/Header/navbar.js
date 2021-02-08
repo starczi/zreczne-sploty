@@ -8,10 +8,10 @@ const StyledUl = styled.ul`
   margin: 0;
 
   li {
-    padding: 2rem 1rem;
+    padding: 2rem 2rem 0 0;
   }
 
-  @media (max-width: ${({ theme }) => theme.devices.s}) {
+  @media (max-width: ${({ theme }) => theme.devices.m}) {
     flex-flow: column nowrap;
     overflow: hidden;
     max-height: ${({ open }) => (open ? '350px' : '0')};
@@ -43,12 +43,12 @@ export default function Navbar({ open }) {
       </li>
       <li>
         <StyledNavbarLink to="/portfolio" activeClassName="active">
-          Portfolio
+          Sploty użytkowe
         </StyledNavbarLink>
       </li>
       <li>
         <StyledNavbarLink to="/about" activeClassName="active">
-          O nas
+          Sploty dekoracyjne
         </StyledNavbarLink>
       </li>
       <li>

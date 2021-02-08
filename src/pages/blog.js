@@ -101,9 +101,6 @@ const StyledP = styled.p`
 
   @media (max-width: 712px) {
     max-height: 284px;
-    /* div {
-      padding-top: 1rem;
-    } */
   }
 `;
 

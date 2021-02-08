@@ -9,7 +9,7 @@ const StyledBurger = styled.button`
   display: none;
   background: transparent;
 
-  @media (max-width: ${({ theme }) => theme.devices.s}) {
+  @media (max-width: ${({ theme }) => theme.devices.m}) {
     display: flex;
     justify-content: space-around;
     flex-direction: column;

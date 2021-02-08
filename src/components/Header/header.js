@@ -5,6 +5,7 @@ import Logo from './logo';
 
 const StyledHeader = styled.header`
   width: 100%;
+  min-width: 409px;
   display: flex;
   flex-direction: column;
   align-items: center;
