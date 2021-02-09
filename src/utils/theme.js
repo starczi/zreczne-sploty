@@ -5,6 +5,7 @@ export const theme = {
     lightGrey: '#f4f4f4',
   },
   devices: {
+    xs: '320px',
     s: '576px',
     m: '768px',
     l: '1024px',
