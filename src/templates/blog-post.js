@@ -5,6 +5,8 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Layout from '../components/Layout/layout';
 
+// OGARNĄĆ IMG ŻEBY BYŁ FLUID
+
 export const query = graphql`
   query($slug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -14,7 +16,7 @@ export const query = graphql`
         date(formatString: "DD MMMM, YYYY", locale: "pl")
         featuredImage {
           childImageSharp {
-            fixed(width: 304, quality: 100) {
+            fixed(width: 288, quality: 100) {
               ...GatsbyImageSharpFixed_noBase64
             }
           }
