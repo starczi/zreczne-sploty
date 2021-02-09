@@ -42,13 +42,13 @@ export default function Navbar({ open }) {
         </StyledNavbarLink>
       </li>
       <li>
-        <StyledNavbarLink to="/portfolio" activeClassName="active">
-          Sploty użytkowe
+        <StyledNavbarLink to="/decorative" activeClassName="active">
+          Sploty dekoracyjne
         </StyledNavbarLink>
       </li>
       <li>
-        <StyledNavbarLink to="/about" activeClassName="active">
-          Sploty dekoracyjne
+        <StyledNavbarLink to="/functional" activeClassName="active">
+          Sploty użytkowe
         </StyledNavbarLink>
       </li>
       <li>

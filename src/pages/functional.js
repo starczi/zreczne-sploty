@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout/layout';
 
-export default function About() {
+export default function Functional() {
   return (
     <Layout>
-      <h1>About page</h1>
+      <div>fun</div>
     </Layout>
   );
 }

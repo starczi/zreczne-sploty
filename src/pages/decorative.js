@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout/layout';
 
-export default function Portfolio() {
+export default function Decorative() {
   return (
     <Layout>
-      <h1>Portfolio</h1>
+      <div>dek</div>
     </Layout>
   );
 }
