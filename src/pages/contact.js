@@ -9,7 +9,6 @@ const StyledP = styled.p`
   margin: 0 auto;
 
   &:first-of-type {
-    margin-top: 3rem;
     padding-bottom: 0.5rem;
   }
 `;

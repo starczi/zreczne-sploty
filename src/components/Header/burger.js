@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Navbar from './navbar';
 
 const StyledBurger = styled.button`
-  margin: 2rem 0;
+  margin-top: 2rem;
   width: 1.5rem;
   height: 1.5rem;
   display: none;

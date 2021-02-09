@@ -9,7 +9,11 @@ const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: ${({ theme }) => theme.devices.m}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export default function Header() {
