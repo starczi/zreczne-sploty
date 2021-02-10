@@ -9,16 +9,15 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   max-width: 1170px;
   min-width: ${theme.devices.xs};
-  padding: 0 1rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+`;
 
-  .grow {
-    flex-grow: 1;
-  }
+const StyledContent = styled.div`
+  flex: 1 1 auto;
 `;
 
 export default function Layout({ children }) {
@@ -27,10 +26,10 @@ export default function Layout({ children }) {
       <>
         <GlobalStyles />
         <StyledContainer>
-          <div className="grow">
-            <Header />
-            {children}
-          </div>
+          {/* <div className="grow"> */}
+          <Header />
+          <StyledContent>{children}</StyledContent>
+          {/* </div> */}
           <Footer />
         </StyledContainer>
       </>

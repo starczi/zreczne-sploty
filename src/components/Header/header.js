@@ -5,6 +5,7 @@ import Logo from './logo';
 
 const StyledHeader = styled.header`
   width: 100%;
+  flex: 0 1 auto;
   min-width: ${({ theme }) => theme.devices.xs};
   display: flex;
   flex-direction: column;

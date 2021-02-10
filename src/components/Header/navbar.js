@@ -22,7 +22,7 @@ const StyledUl = styled.ul`
       padding: 1rem 0;
 
       &:last-child {
-        padding-bottom: 2rem;
+        padding-bottom: 0;
       }
     }
   }

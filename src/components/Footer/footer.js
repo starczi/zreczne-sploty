@@ -7,6 +7,7 @@ import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const StyledFooter = styled.footer`
+  flex: 0 1 40px;
   padding: 2rem 0 1rem;
 
   a {
