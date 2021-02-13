@@ -7,7 +7,7 @@ import Layout from '../components/Layout/layout';
 const StyledWrapper = styled.div`
   max-width: 850px;
   min-width: 272px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   position: relative;
 
   p {
@@ -56,6 +56,10 @@ const StyledContentWrapper = styled.div`
   flex-direction: column;
   padding: 1rem;
   width: 408px;
+
+  h3 {
+    font-size: 1.5rem;
+  }
 
   h6 {
     padding-top: 0.5rem;

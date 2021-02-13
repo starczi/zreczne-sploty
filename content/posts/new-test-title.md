@@ -1,5 +1,5 @@
 ---
-title: New test title
+title: Tytuł 2
 date: 2021-01-16T16:07:51.276Z
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non neque quis nisl semper efficitur eget a quam.'
 featuredImage: '../../static/images/mak2.jpg'

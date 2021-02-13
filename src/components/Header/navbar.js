@@ -20,10 +20,6 @@ const StyledUl = styled.ul`
 
     li {
       padding: 1rem 0;
-
-      &:last-child {
-        padding-bottom: 0;
-      }
     }
   }
 `;

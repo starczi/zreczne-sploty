@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     height: 100vh;
     text-rendering: optimizeLegibility;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
   }
 
   h1 {
@@ -26,9 +26,13 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    text-decoration: none;
+    text-decoration: none !important;
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.black} !important;
+
+    &:hover{
+      color: ${({ theme }) => theme.colors.black} !important;
+    }
   }
 
   button {
@@ -38,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ul {
-    list-style-type: none;
+    list-style-type: none !important;
     padding-left: 0;
   }
 `;

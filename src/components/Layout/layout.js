@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import Header from '../Header/header';
 import Footer from '../Footer/footer';
 import { theme } from '../../utils/theme';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { GlobalStyles } from '../../utils/global';
 
 const StyledContainer = styled.div`
@@ -18,6 +19,7 @@ const StyledContainer = styled.div`
 
 const StyledContent = styled.div`
   flex: 1 1 auto;
+  padding: 0 1rem;
 `;
 
 export default function Layout({ children }) {
@@ -26,10 +28,8 @@ export default function Layout({ children }) {
       <>
         <GlobalStyles />
         <StyledContainer>
-          {/* <div className="grow"> */}
           <Header />
           <StyledContent>{children}</StyledContent>
-          {/* </div> */}
           <Footer />
         </StyledContainer>
       </>

@@ -27,6 +27,7 @@ export default function Functional() {
   const StyledBackgroundImage = styled(BackgroundImage)`
     box-shadow: 0 0 40px rgb(0 0 0 / 10%);
 
+    //Ogarnąć ten margin bo wstyd
     margin: 91.5px 1rem 0 1rem;
 
     @media (max-width: 1167px) {
