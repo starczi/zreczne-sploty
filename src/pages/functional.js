@@ -67,7 +67,7 @@ export default function Functional() {
 
   return (
     <Layout>
-      <h1> Makramy użytkowe</h1>
+      <h1> Sploty użytkowe</h1>
       <StyledBackgroundImage fixed={data.file.childImageSharp.fixed}>
         <Link to="/">
           <BlackOverlay>

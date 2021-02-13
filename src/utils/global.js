@@ -6,10 +6,6 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  *, *::after, *::before {
-    box-sizing: border-box;
-  }
-
   body {
     height: 100vh;
     text-rendering: optimizeLegibility;
