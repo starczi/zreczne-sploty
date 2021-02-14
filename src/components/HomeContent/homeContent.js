@@ -50,9 +50,8 @@ const StyledOuterContainer = styled.div`
   }
 `;
 
-const StyledInnerContainer = styled.div`
+const StyledLeftInnerContainer = styled.div`
   background-color: green;
-  padding: 0;
   display: flex;
 
   &:first-of-type {
@@ -70,12 +69,36 @@ const StyledInnerContainer = styled.div`
   }
 `;
 
+const StyledRightInnerContainer = styled.div`
+  background-color: red;
+
+  @media (max-width: ${({ theme }) => theme.devices.m}) {
+    display: flex;
+    div,
+    p {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 496px) {
+    display: block;
+  }
+`;
+
+const StyledInstagramContainer = styled.div`
+  background-color: gold;
+
+  @media (max-width: ${({ theme }) => theme.devices.m}) {
+    margin-top: 2rem;
+  }
+`;
+
 export default function HomeContent() {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "mak1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 260, quality: 100) {
+          fluid(maxWidth: 260, maxHeight: 260, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
@@ -86,7 +109,7 @@ export default function HomeContent() {
     <StyledContainer>
       <StyledOuterContainer>
         <h1>tytuł</h1>
-        <StyledInnerContainer>
+        <StyledLeftInnerContainer>
           <div>
             <Img fluid={data.file.childImageSharp.fluid} />
           </div>
@@ -97,24 +120,28 @@ export default function HomeContent() {
               tekst tekst tekst tekst tekst tekst
             </p>
           </div>
-        </StyledInnerContainer>
-        <StyledInnerContainer>
+        </StyledLeftInnerContainer>
+        <StyledLeftInnerContainer>
           <Img fluid={data.file.childImageSharp.fluid} />
           <div>
             <h3>Sploty użytkowe</h3>
-            <p>tekst</p>
+            <p>
+              tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst
+              tekst tekst tekst tekst tekst tekst
+            </p>
           </div>
-        </StyledInnerContainer>
+        </StyledLeftInnerContainer>
       </StyledOuterContainer>
       <StyledOuterContainer>
         <h1>O NAS</h1>
-        <Img fluid={data.file.childImageSharp.fluid} />
-        <div>
+        <StyledRightInnerContainer>
+          <Img fluid={data.file.childImageSharp.fluid} />
           <p>
             tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst
             tekst tekst tekst tekst tekst tekst
           </p>
-        </div>
+        </StyledRightInnerContainer>
+        <StyledInstagramContainer>INSTAGRAM CONTAINER</StyledInstagramContainer>
       </StyledOuterContainer>
     </StyledContainer>
   );
