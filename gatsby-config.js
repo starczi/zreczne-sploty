@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+require('dotenv').config();
 
 module.exports = {
   /* Your site config here */
@@ -26,6 +27,16 @@ module.exports = {
       options: {
         path: `${__dirname}/static/images`,
         name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-cloudinary',
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+        resourceType: 'image',
+        prefix: 'gatsby-source/',
       },
     },
     'gatsby-plugin-sharp',

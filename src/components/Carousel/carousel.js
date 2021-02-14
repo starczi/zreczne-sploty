@@ -15,7 +15,7 @@ const StyledCarouselItem = styled(Carousel.Item)`
   max-height: 100%;
   height: ${({ theme }) => theme.devices.s};
 
-  @media (max-width: 480px) {
+  @media (max-width: 512px) {
     height: auto;
   }
 `;

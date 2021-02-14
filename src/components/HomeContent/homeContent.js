@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 
@@ -114,7 +114,9 @@ export default function HomeContent() {
             <Img fluid={data.file.childImageSharp.fluid} />
           </div>
           <div>
-            <h3>Sploty dekoracyjne</h3>
+            <Link to="/decorative">
+              <h3>Sploty dekoracyjne</h3>
+            </Link>
             <p>
               tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst
               tekst tekst tekst tekst tekst tekst
@@ -124,7 +126,9 @@ export default function HomeContent() {
         <StyledLeftInnerContainer>
           <Img fluid={data.file.childImageSharp.fluid} />
           <div>
-            <h3>Sploty użytkowe</h3>
+            <Link to="/functional">
+              <h3>Sploty użytkowe</h3>
+            </Link>
             <p>
               tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst
               tekst tekst tekst tekst tekst tekst

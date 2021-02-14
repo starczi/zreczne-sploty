@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Layout from '../components/Layout/layout';
 
 // OGARNĄĆ IMG ŻEBY BYŁ FLUID
+// breadbrumbs
 
 export const query = graphql`
   query($slug: String) {
