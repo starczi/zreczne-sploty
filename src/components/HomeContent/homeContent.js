@@ -5,12 +5,10 @@ import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   display: flex;
-  background-color: grey;
   margin-top: 4rem;
   padding: 1rem;
 
   p {
-    background-color: darkmagenta;
     margin: 1rem 0.5rem;
   }
 
@@ -21,23 +19,18 @@ const StyledContainer = styled.div`
 `;
 
 const StyledOuterContainer = styled.div`
+  box-shadow: 0 0 40px rgb(0 0 0 / 8%);
+
   &:first-of-type {
-    background-color: yellow;
     flex: 2;
   }
   &:last-of-type {
-    background-color: violet;
     flex: 1;
     margin-left: 2rem;
   }
 
   h1 {
-    background-color: orange;
     margin-bottom: 1.5rem;
-  }
-
-  h3 {
-    background-color: pink;
   }
 
   @media (max-width: ${({ theme }) => theme.devices.m}) {
@@ -51,7 +44,6 @@ const StyledOuterContainer = styled.div`
 `;
 
 const StyledLeftInnerContainer = styled.div`
-  background-color: green;
   display: flex;
 
   &:first-of-type {
@@ -70,10 +62,9 @@ const StyledLeftInnerContainer = styled.div`
 `;
 
 const StyledRightInnerContainer = styled.div`
-  background-color: red;
-
   @media (max-width: ${({ theme }) => theme.devices.m}) {
     display: flex;
+    //change sth here?
     div,
     p {
       flex: 1;
@@ -86,8 +77,6 @@ const StyledRightInnerContainer = styled.div`
 `;
 
 const StyledInstagramContainer = styled.div`
-  background-color: gold;
-
   @media (max-width: ${({ theme }) => theme.devices.m}) {
     margin-top: 2rem;
   }
@@ -118,8 +107,8 @@ export default function HomeContent() {
               <h3>Sploty dekoracyjne</h3>
             </Link>
             <p>
-              tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst
-              tekst tekst tekst tekst tekst tekst
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </StyledLeftInnerContainer>
@@ -130,8 +119,8 @@ export default function HomeContent() {
               <h3>Sploty użytkowe</h3>
             </Link>
             <p>
-              tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst
-              tekst tekst tekst tekst tekst tekst
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
         </StyledLeftInnerContainer>
@@ -141,11 +130,11 @@ export default function HomeContent() {
         <StyledRightInnerContainer>
           <Img fluid={data.file.childImageSharp.fluid} />
           <p>
-            tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst tekst
-            tekst tekst tekst tekst tekst tekst
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
           </p>
         </StyledRightInnerContainer>
-        <StyledInstagramContainer>INSTAGRAM CONTAINER</StyledInstagramContainer>
+        <StyledInstagramContainer></StyledInstagramContainer>
       </StyledOuterContainer>
     </StyledContainer>
   );
