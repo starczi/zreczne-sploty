@@ -13,11 +13,11 @@ public_folder: /images
 collections:
   - name: 'post'
     label: 'Post'
-    folder: 'content/posts/{{slug}}'
+    folder: 'content/posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    media_folder: ''
-    public_folder: ''
+    media_folder: static/images/uploads
+    public_folder: /images/uploads
     # path: '{{title}}/index'
     editor:
       preview: true
