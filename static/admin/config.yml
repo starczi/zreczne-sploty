@@ -4,11 +4,11 @@ backend:
 
 media_folder: static/images
 public_folder: /images
-media_library:
-  name: cloudinary
-  config:
-    cloud_name: starczi
-    api_key: 648339465694698
+# media_library:
+#   name: cloudinary
+#   config:
+#     cloud_name: starczi
+#     api_key: 648339465694698
 
 collections:
   - name: 'post'
