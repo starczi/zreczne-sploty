@@ -17,8 +17,6 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     path: '{{slug}}/{{slug}}'
-    # media_folder: static/images/uploads
-    # public_folder: /images/uploads
     editor:
       preview: true
     fields:

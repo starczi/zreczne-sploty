@@ -30,7 +30,11 @@ const StyledOuterContainer = styled.div`
   }
 
   h1 {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  h4 {
+    margin-top: 1rem;
   }
 
   @media (max-width: ${({ theme }) => theme.devices.m}) {
@@ -45,9 +49,10 @@ const StyledOuterContainer = styled.div`
 
 const StyledLeftInnerContainer = styled.div`
   display: flex;
+  box-shadow: 0 0 40px rgb(0 0 0 / 5%);
 
   &:first-of-type {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   div {
     flex: 1;
@@ -76,11 +81,11 @@ const StyledRightInnerContainer = styled.div`
   }
 `;
 
-const StyledInstagramContainer = styled.div`
-  @media (max-width: ${({ theme }) => theme.devices.m}) {
-    margin-top: 2rem;
-  }
-`;
+// const StyledInstagramContainer = styled.div`
+//   @media (max-width: ${({ theme }) => theme.devices.m}) {
+//     margin-top: 2rem;
+//   }
+// `;
 
 export default function HomeContent() {
   const data = useStaticQuery(graphql`
@@ -97,14 +102,14 @@ export default function HomeContent() {
   return (
     <StyledContainer>
       <StyledOuterContainer>
-        <h1>tytuł</h1>
+        <h1>Section title</h1>
         <StyledLeftInnerContainer>
           <div>
             <Img fluid={data.file.childImageSharp.fluid} />
           </div>
           <div>
             <Link to="/decorative">
-              <h3>Sploty dekoracyjne</h3>
+              <h4>Sploty dekoracyjne</h4>
             </Link>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -116,7 +121,7 @@ export default function HomeContent() {
           <Img fluid={data.file.childImageSharp.fluid} />
           <div>
             <Link to="/functional">
-              <h3>Sploty użytkowe</h3>
+              <h4>Sploty użytkowe</h4>
             </Link>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -126,7 +131,7 @@ export default function HomeContent() {
         </StyledLeftInnerContainer>
       </StyledOuterContainer>
       <StyledOuterContainer>
-        <h1>O NAS</h1>
+        <h1>About us</h1>
         <StyledRightInnerContainer>
           <Img fluid={data.file.childImageSharp.fluid} />
           <p>
@@ -134,7 +139,7 @@ export default function HomeContent() {
             incididunt ut labore et dolore magna aliqua.
           </p>
         </StyledRightInnerContainer>
-        <StyledInstagramContainer></StyledInstagramContainer>
+        {/* <StyledInstagramContainer></StyledInstagramContainer> */}
       </StyledOuterContainer>
     </StyledContainer>
   );

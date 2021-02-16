@@ -1,7 +1,0 @@
----
-title: " TITLE TITLE TITLETITLE"
-date: 2021-02-15T21:39:53.228Z
-description: " TITLE  TITLE  TITLE  TITLE  TITLE "
-featuredImage: img_20210209_093254.jpg
----
- TITLE  TITLE  TITLE  TITLE  TITLE
