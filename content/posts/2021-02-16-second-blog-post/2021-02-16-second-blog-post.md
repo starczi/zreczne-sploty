@@ -4,10 +4,9 @@ date: 2021-02-16T20:42:44.064Z
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Suspendisse mollis at leo non euismod. Quisque volutpat tellus in dui feugiat,
   id tempor nisi cursus. In ac dui nec diam suscipit sodales non in ligula.
-  Praesent lobortis elit a sagittis scelerisque. Sed dapibus erat at laoreet
-  blandit. Etiam quis fringilla enim.
 featuredImage: mak2.jpg
 ---
+
 <!--StartFragment-->
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis at leo non euismod. Quisque volutpat tellus in dui feugiat, id tempor nisi cursus. In ac dui nec diam suscipit sodales non in ligula. Praesent lobortis elit a sagittis scelerisque. Sed dapibus erat at laoreet blandit. Etiam quis fringilla enim. Integer ornare ultricies interdum. Integer posuere ipsum at lectus condimentum, eu posuere elit sodales. Quisque scelerisque, turpis ac pulvinar blandit, sem nibh fringilla elit, at vestibulum lacus nulla quis magna. Aliquam vel dictum ipsum. Donec viverra massa vitae venenatis faucibus. Donec a tempus metus, tempus lacinia velit. Aliquam rhoncus at sapien non iaculis. Donec ligula magna, scelerisque vel fermentum non, suscipit sed nibh. Etiam vitae dignissim sapien, vitae bibendum eros. Vestibulum feugiat egestas ex ac auctor.
